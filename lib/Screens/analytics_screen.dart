@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import '../Widgets/bottom_navigation_bar.dart';
 import '../Widgets/main_drawer.dart';
 import '../Widgets/vertical_bar.dart';
@@ -122,85 +121,132 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
               child: TabBarView(
                 children: tabs
                     .map(
-                      (tab) => Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                const Text(
-                                  'Statistics',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                                InkWell(
-                                  onTap: () {
-
-                                  },
-                                  child: Container(
-                                    width: 90,
-                                    height: 40,
-                                    padding: const EdgeInsets.all(10),
-                                    decoration: ShapeDecoration(
-                                      color: const Color(0x33C4C4C4),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(20),
-                                      ),
+                      (tab) => SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 30),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  const Text(
+                                    'Statistics',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 18,
+                                      fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.w600,
                                     ),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          'Week',
-                                          style: TextStyle(
+                                  ),
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Container(
+                                      width: 90,
+                                      height: 40,
+                                      padding: const EdgeInsets.all(10),
+                                      decoration: ShapeDecoration(
+                                        color: const Color(0x33C4C4C4),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                        ),
+                                      ),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            'Week',
+                                            style: TextStyle(
+                                              color:
+                                                  Colors.black.withOpacity(0.5),
+                                              fontSize: 12,
+                                              fontFamily: 'Poppins',
+                                              fontWeight: FontWeight.w400,
+                                            ),
+                                          ),
+                                          const SizedBox(width: 10),
+                                          Icon(
+                                            Icons.arrow_drop_down,
+                                            size: 20,
                                             color:
                                                 Colors.black.withOpacity(0.5),
-                                            fontSize: 12,
-                                            fontFamily: 'Poppins',
-                                            fontWeight: FontWeight.w400,
-                                          ),
-                                        ),
-                                        const SizedBox(width: 10),
-                                        Icon(
-                                          Icons.arrow_drop_down,
-                                          size: 20,
-                                          color: Colors.black.withOpacity(0.5),
-                                        )
-                                      ],
+                                          )
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                )
-                              ],
+                                  )
+                                ],
+                              ),
                             ),
-                          ),
-                          const SizedBox(height: 20),
-                          Container(
-                            margin: const EdgeInsets.only(right: 30, left: 40),
-                            child: Row(
-                              children: [
-                                VerticalBarWidget(activeHight: 77, title: 'S',activeColor: Colors.blue),
-                                const SizedBox(width: 40),
-                                VerticalBarWidget(activeHight: 100, title: 'M',activeColor: Colors.orange),
-                                const SizedBox(width: 40),
-                                VerticalBarWidget(activeHight: 50, title: 'T',activeColor: Colors.purple),
-                                const SizedBox(width: 40),
-                                VerticalBarWidget(activeHight: 140, title: 'W',activeColor: Colors.blue),
-                                const SizedBox(width: 40),
-                                VerticalBarWidget(activeHight: 99, title: 'T',activeColor: Colors.purple),
-                                const SizedBox(width: 40),
-                                VerticalBarWidget(activeHight: 88, title: 'F',activeColor: Colors.orange),
-                                const SizedBox(width: 40),
-                                VerticalBarWidget(activeHight: 20, title: 'S',activeColor: Colors.orange),
-                              ],
+                            const SizedBox(height: 20),
+                            Container(
+                              margin:
+                                  const EdgeInsets.only(right: 30, left: 40),
+                              child: Row(
+                                children: [
+                                  VerticalBarWidget(
+                                      activeHight: 77,
+                                      title: 'S',
+                                      activeColor: Colors.blue),
+                                  const SizedBox(width: 40),
+                                  VerticalBarWidget(
+                                      activeHight: 100,
+                                      title: 'M',
+                                      activeColor: Colors.orange),
+                                  const SizedBox(width: 40),
+                                  VerticalBarWidget(
+                                      activeHight: 50,
+                                      title: 'T',
+                                      activeColor: Colors.purple),
+                                  const SizedBox(width: 40),
+                                  VerticalBarWidget(
+                                      activeHight: 140,
+                                      title: 'W',
+                                      activeColor: Colors.blue),
+                                  const SizedBox(width: 40),
+                                  VerticalBarWidget(
+                                      activeHight: 99,
+                                      title: 'T',
+                                      activeColor: Colors.purple),
+                                  const SizedBox(width: 40),
+                                  VerticalBarWidget(
+                                      activeHight: 88,
+                                      title: 'F',
+                                      activeColor: Colors.orange),
+                                  const SizedBox(width: 40),
+                                  VerticalBarWidget(
+                                      activeHight: 20,
+                                      title: 'S',
+                                      activeColor: Colors.orange),
+                                ],
+                              ),
                             ),
-                          ),
-                        ],
+                            const SizedBox(height: 20),
+                            customRow(
+                              color: Colors.green.shade100,
+                              imgPath: 'assets/images/Deadlift.png',
+                              title: 'Training',
+                              subTitle: '4.5 hours',
+                            ),
+                            const SizedBox(height: 20),
+                            customRow(
+                              color: Colors.red.shade100,
+                              imgPath: 'assets/images/Walking.png',
+                              title: 'Steps',
+                              subTitle: '24 km per week',
+                            ),
+                            const SizedBox(height: 20),
+                            customRow(
+                              color: Colors.blue.shade100,
+                              imgPath: 'assets/images/Resturant.png',
+                              title: 'Calories',
+                              subTitle: '6215 calories burned',
+                            ),
+                          ],
+                        ),
                       ),
                     )
                     .toList(),
@@ -209,6 +255,62 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
           ],
         ),
         bottomNavigationBar: BottomNavBar(index: 1),
+      ),
+    );
+  }
+
+  Padding customRow({
+    required String imgPath,
+    required String title,
+    required String subTitle,
+    required Color color,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 50),
+      child: Row(
+        children: [
+          Container(
+            width: 50,
+            height: 50,
+            decoration: BoxDecoration(
+                color: color,
+                borderRadius: const BorderRadius.all(Radius.circular(20))),
+            child: Image.asset(imgPath),
+          ),
+          const SizedBox(width: 30),
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.4,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  softWrap: true,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  subTitle,
+                  softWrap: true,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
+                  style: TextStyle(
+                    color: Colors.black.withOpacity(0.5),
+                    fontSize: 14,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
