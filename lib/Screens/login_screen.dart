@@ -6,7 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../Widgets/custom_button.dart';
 import '../constants.dart';
 import '../utils/animated_navigation.dart';
-import 'onboardering_screen.dart';
+import 'onboarding_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
